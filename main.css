@@ -1,0 +1,196 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    margin: 0;
+}
+body {
+    background: rgba(0,0,0,0.85);
+    height: 200% !important;
+}
+
+#main {
+    position: fixed;
+    top:15%;
+    left:15%;
+    right:15%;
+    bottom:15%;
+    background: rgba(255,255,255,0.05);
+    padding: 1em;
+    border-radius: 12px;
+    box-shadow: 0 0 9px rgba(255,255,255,0.3);
+    text-align: center;
+}
+
+#main-2 {
+    display: none;
+    position: fixed;
+    top:15%;
+    left:15%;
+    right:15%;
+    bottom:15%;
+    background: rgba(255,255,255,0.05);
+    padding: 1em;
+    border-radius: 12px;
+    box-shadow: 0 0 9px rgba(255,255,255,0.3);
+    text-align: center;
+    opacity: 0;
+}
+
+#next {
+    background-color: #4169e1;
+    color: white;
+    position: fixed;
+    right: 16%;
+    top: 70%;
+    padding: 15px 25px;
+    outline: none;
+    border: none;
+    border-radius: 9px;
+}
+.fade-out {
+    animation: fadeout 1s ease-out;
+    opacity: 0;
+}
+.fade-in {
+    animation: fadein 1s ease-out;
+    opacity: 1;
+}
+
+.project {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#name {
+    font-size: 35px;
+}
+
+.no-decs {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    color: rgba(255,255,255,0.6)
+}
+
+h1:hover {
+    animation: italicfh1 0.4s ease-in;
+    color: lightblue;
+}
+p:hover {
+    animation: italicfp 0.4s ease-in;
+    color: lightblue;
+}
+
+@keyframes italicfh1 {
+    0% {
+        color: #4169e1;
+    }
+    100% {
+        color: lightblue;
+    }
+}
+
+@keyframes italicfp {
+    0% {
+        color: rgba(255,255,255,0.6);
+    }
+    100% {
+        color: lightblue;
+    }
+}
+.cool-lightblue {
+    color: #4169e1;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+#skills {
+    float: left;
+    max-width: 60%;
+    min-width: 35%;
+    margin: auto;
+    margin-left: 1%;
+    padding: 15px;
+}
+
+#interests {
+    float: right;
+    max-width: 40%;
+    min-width: 35%;
+    margin: auto;
+    margin-right: 1%;
+    padding: 15px;
+}
+ul li {
+    list-style: none;
+    font-size: 1.1em;
+}
+/* ul li::before {
+    content: "\2022";
+    color: cyan;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1em;
+    margin-right: 10px;
+} */
+
+ul li {
+    text-align: center;
+    position:relative;
+}
+
+#skills h3 {
+    color: cyan;
+}
+
+/* ul li {
+    display: inline;
+    text-align: center;
+} */
+
+img {
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+}
+
+.diamond_holder {
+    position: fixed;
+    left: 35%;
+    top: auto;
+    left: auto;
+    bottom: auto;
+}
