@@ -1,19 +1,23 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
 
 body {
-    background: whitesmoke;
+    background: whitesmoke !important;
 }
 
 * {
     font-family: 'Roboto', sans-serif;
+    line-height: 25px;
 }
 
 h3 {
     margin: 0;
 }
 body {
-    background: rgba(0,0,0,0.85);
     height: 200% !important;
+    scroll-behavior: smooth;
+    background-image: url(/assets/background.jpg) !important;
+    background-size:100% !important;
+    overflow: hidden;
 }
 
 #main {
@@ -22,11 +26,11 @@ body {
     left:15%;
     right:15%;
     bottom:15%;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.9);
     padding: 1em;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
 
 #main-2 {
@@ -36,10 +40,10 @@ body {
     left:15%;
     right:15%;
     bottom:15%;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.9);
     padding: 1em;
     border-radius: 12px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
     text-align: center;
     opacity: 0;
 }
@@ -102,7 +106,7 @@ p {
     color: rgba(255,255,255,0.6)
 }
 
-h1:hover {
+#main h1:hover, #main-2 h1:hover {
     animation: italicfh1 0.4s ease-in;
     color: lightblue;
 }
@@ -197,4 +201,21 @@ img {
     top: auto;
     left: auto;
     bottom: auto;
+}
+
+#scroll-div {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    width: 100%;
+    margin-top: 200% !important;
+    background: rgba(0,0,0,0.9);
+}
+#scroll-div * {
+    color: white;
+}
+
+hr {
+    border: 0 0 0 0;
+    border: 1px solid gray !important;
 }
