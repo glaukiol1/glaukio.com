@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
 
+body {
+    background: whitesmoke;
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -18,11 +22,11 @@ body {
     left:15%;
     right:15%;
     bottom:15%;
-    background: rgba(255,255,255,0.05);
+    background: rgba(0,0,0,0.2);
     padding: 1em;
     border-radius: 12px;
-    box-shadow: 0 0 9px rgba(255,255,255,0.3);
     text-align: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
 #main-2 {
@@ -32,10 +36,10 @@ body {
     left:15%;
     right:15%;
     bottom:15%;
-    background: rgba(255,255,255,0.05);
+    background: rgba(0,0,0,0.2);
     padding: 1em;
     border-radius: 12px;
-    box-shadow: 0 0 9px rgba(255,255,255,0.3);
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
     text-align: center;
     opacity: 0;
 }
