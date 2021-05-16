@@ -211,6 +211,36 @@ img {
     margin-top: 200% !important;
     background: rgba(0,0,0,0.9);
 }
+code {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666 !important;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+.data-function {
+    color: yellowgreen !important;
+}
+
+.data-string {
+    color: rgb(255, 116, 139) !important;
+    font-weight: 800;
+}
+
+.data-comment {
+    color: rgb(0, 184, 0) !important;
+}
+
 #scroll-div * {
     color: white;
 }

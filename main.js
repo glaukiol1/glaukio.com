@@ -1,3 +1,4 @@
+
 const main = document.getElementById('main')
 const main2 = document.getElementById('main-2')
 document.getElementById('next').addEventListener('click', (ev) => {
@@ -50,7 +51,6 @@ function doScrolling(elementY, duration) {
   
 
 document.getElementById('make-scroll').addEventListener('click', (e)=>{
-    document.body.style.overflowY = 'scroll';
     main2.classList = 'fade-out';
     setTimeout( () => {
         main2.style.opacity = '0'
