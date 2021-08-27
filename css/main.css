@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap);
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+body {
+    background: whitesmoke !important;
+}
+
+* {
+    font-family: "Open Sans", Helvetica, Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 25px;
+}
+
+h3 {
+    margin: 0;
+}
+
+body {
+    height: 100vh !important;
+    scroll-behavior: smooth;
+    background-color: #e9ffe8 !important;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 92%;
+    padding-top: 1.5%; 
+    text-align: right;
+    padding-right: 4%;
+}
+
+#top-level {
+    text-align: center;
+    min-height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#heading {
+    text-align: center;
+    font-size: 60px;
+    line-height: 1.5em;
+    color: #006b47;
+}
+
+#bio {
+    color: #006b47;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.gh-img {
+    width: 60px;
+    height: 80px;
+}
+
+.button {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 700;
+    padding: 10px 15px;
+    width: max-content;
+    border-radius: 5px;
+    margin: 25px auto;
+    text-decoration: none;
+    -webkit-box-shadow: 0px 3px 7px 0px rgb(0 0 0 / 30%);
+    -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 7px 0px rgb(0 0 0 / 30%);
+}
+
+.about-button {
+    background-color: #79db75;
+    color: #006b47;
+    transition: all 0.3s;
+}
