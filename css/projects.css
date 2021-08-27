@@ -57,13 +57,14 @@ body {
 @media only screen and (max-width: 1000px) {
     .widget-row {
         display: inline-block;
-        text-align: center;
+        /* text-align: center; */
+        width: 100%;
     }
 
     .widget {
         display: inline-block;
-        max-width: 400px;
-        min-width: 300px;
+        max-height: 500px;
+        width: 200px;
     }
 
     #ftr {
