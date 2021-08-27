@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <title>Glaukio L VSH</title>
-        <link rel="stylesheet" href="../css/vsh.css" />
-        <link rel="stylesheet" href="../css/common.css" />
+<head>
+    <title>Glaukio L VSH</title>
+    <link rel="stylesheet" href="../css/vsh.css" />
+    <link rel="stylesheet" href="../css/common.css" />
 
-    </head>
+</head>
 
-    <body>
-        <h1 id="heading">My Shell!</h1>
+<body>
+    <h1 id="heading">My Shell!</h1>
 
-        <footer>
-            <a class="navbar-icon unactive-navbar-icon" href="../index.html">😎</a>
+    <div id="vsh-window">
+        <header class="vsh-topbar">
+            <p>vsh shell</p><a class="vsh-close" href="../index.html"></a>
+        </header>
+        <pre class="vsh-textarea">
+Enter <span class="vsh-text vsh-green">help</span> to see available commands!
+<span class="vsh-text vsh-magenta">Made by <a href="https://github.com/glaukiol1">@glaukiol1</a></span>
+<span class="vsh-text vsh-yellow">VSH does not support mobile devices.</span>
 
-            <a class="navbar-icon unactive-navbar-icon" href="./projects.html">💡</a>
+<span id="cmd-area"></span>
+<span class="vsh-text vsh-yellow">guest</span> at <span class="vsh-text vsh-magenta">glaukiol1</span>
+<span id="textarea">❯ █</span>
+    </pre>
+    </div>
 
-            <a class="navbar-icon active-navbar-icon" href="#">⌨️</a>
-        </footer>
-    </body>
+    <footer>
+        <a class="navbar-icon unactive-navbar-icon" href="../index.html">😎</a>
+
+        <a class="navbar-icon unactive-navbar-icon" href="./projects.html">💡</a>
+
+        <a class="navbar-icon active-navbar-icon" href="#">⌨️</a>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
 
 </html>
