@@ -1,5 +1,21 @@
+
+
+const commands = { // commands
+    'help': 'VSH is a terminal emulator that I coded, to help you learn about me. Im currently updating this site as much as I can, so new commands will be added. <br><br>Use up and down arrow keys to browse command history (unless it\'s empty).<br><br>And most importantly -- have fun! <br><br>Available Commands: <br><br>     <span class="vsh-text vsh-green">whoami  </span> -- A bit about me ',
+    'whoami': 'Im a programmer, always looking to learn new things, currently, im learning Java on Udemy.com.'
+
+}
+
+
+
+
+
+
+
 var commandMemory = [];
 var currentData = '';
+var textArea = document.getElementById('textarea');
+var cmdArea = document.getElementById('cmd-area');
 
 const acceptedChars = [" ", ".", ",", "(", ")", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
@@ -24,38 +40,61 @@ const keypress = (key, action) => {
     if (action === 'cmd') {
         if (acceptedChars.indexOf(key) !== -1) {
             currentData+=key;
-            document.getElementById('textarea').innerHTML = `❯ ${currentData}█`
+            textArea.innerHTML = `❯ ${currentData}█`
         }
     } else if (action === 'back') {
         currentData = currentData.slice(0,currentData.length-1);
-        document.getElementById('textarea').innerHTML = `❯ ${currentData}█`
+        textArea.innerHTML = `❯ ${currentData}█`
     } else if (action === 'run') {
         cmdBackCount = 1;
         commandMemory.push(currentData);
-        callCommand(currentData)
+        textArea.innerHTML = `❯ ${currentData}`
+        callCommand(currentData);
     } else if (action === 'last-cmd') {
         currentData = commandMemory[commandMemory.length-cmdBackCount] ? commandMemory[commandMemory.length-cmdBackCount] : '';
-        document.getElementById('textarea').innerHTML = `❯ ${currentData}█`
+        textArea.innerHTML = `❯ ${currentData}█`
         cmdBackCount+=1;
     }
 }
 
-const clearTextArea = () => {
+
+const newTextarea = () => {
+    var h = document.getElementsByClassName('vsh-textarea')[0];
+    var j = document.createElement('span');
+    h.innerHTML += '<br /><span class="vsh-text vsh-yellow">guest</span> at <span class="vsh-text vsh-magenta">glaukiol1</span><br>';
+    j.innerHTML = '❯ █'
+    return h.appendChild(j);
+}
+
+const newCmdArea = () => {
+    var h = document.getElementsByClassName('vsh-textarea')[0];
+    var j = document.createElement('span');
+    h.innerHTML += '<br />';
+    return h.appendChild(j);
+}
+
+const commandCleanup = () => {
+    textArea = newTextarea();
     currentData = '';
-    document.getElementById('textarea').innerHTML = `❯ ${currentData}█`
 }
 
 const getCommandOutput = (command) => {
     if (command === "help") {
-        return 'Help will come your way!'
-    } else {
-        return 'Invalid Command!'
+        return commands.help;
+    } else if (command === 'whoami') {
+        return commands.whoami;
+    } else{
+        return `Unknown command: <span class="vsh-text vsh-magenta">${command}</span>`;
     }
 }
 
 const callCommand = (command) => {
-    document.getElementById('cmd-area').innerHTML += getCommandOutput(command) + '<br>';
-    clearTextArea();
+    
+    cmdArea = newCmdArea();
+    cmdArea.innerHTML += getCommandOutput(command) + '<br>';
+    commandCleanup();
+    var h = document.getElementsByClassName('vsh-textarea')[0];
+    h.scrollTop = h.scrollHeight;
 }
 
 document.addEventListener('keydown', (e) => {
