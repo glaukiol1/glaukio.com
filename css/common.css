@@ -1,0 +1,42 @@
+footer {
+    position: fixed;
+    bottom: 5%;
+    right: 44%;
+    left: 44%;
+    background-color: white;
+    padding: 1em;
+    border-radius: 14px;
+    box-shadow: 2px 3px 5px lightgray;
+}
+
+.navbar-icon {
+    display: inline-block;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+.unactive-navbar-icon:hover {
+    animation: bg .8s ease-in;
+    background-color: rgba(5,5,5,0.08);
+}
+
+.active-navbar-icon {
+    background-color: rgba(5,5,5,0.08);
+}
+
+
+@keyframes bg {
+    0% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: rgba(5,5,5,0.08);
+    }
+}

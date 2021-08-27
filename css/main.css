@@ -9,6 +9,8 @@ body {
 * {
     font-family: "Open Sans", Helvetica, Tahoma, Geneva, Verdana, sans-serif;
     line-height: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 h3 {
