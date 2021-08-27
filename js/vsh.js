@@ -1,8 +1,11 @@
 
 
 const commands = { // commands
-    'help': 'VSH is a terminal emulator that I coded, to help you learn about me. Im currently updating this site as much as I can, so new commands will be added. <br><br>Use up and down arrow keys to browse command history (unless it\'s empty).<br><br>And most importantly -- have fun! <br><br>Available Commands: <br><br>     <span class="vsh-text vsh-green">whoami  </span> -- A bit about me ',
-    'whoami': 'Im a programmer, always looking to learn new things, currently, im learning Java on Udemy.com.'
+    'help': 'VSH is a terminal emulator that I coded, to help you learn about me. Im currently updating this site as much as I can, so new commands will be added. <br><br>Use up and down arrow keys to browse command history (unless it\'s empty).<br><br>And most importantly -- have fun! <br><br>Available Commands: <br><br>     <span class="vsh-text vsh-green">whoami  </span> -- A bit about me<br>     <span class="vsh-text vsh-green">touch     </span> -- Ways to get in touch with me<br>     <span class="vsh-text vsh-green">learning </span> -- My learning achievements in programming<br>     <span class="vsh-text vsh-green">top </span>          -- My top programming languages ',
+    'whoami': 'Im a programmer, always looking to learn new things, currently, im learning Java on Udemy.com.',
+    'touch': 'Ways to get in touch:<br><br>     Email: <a href="mailto:glaukiol1@gmail.com">glaukiol1@gmail.com</a><br>     GitHub: <a href="https://github.com/glaukiol1">https://github.com/glaukiol1</a>',
+    'learning': 'These are my achievements for programming; <br><br>    Udemy Build a Blockchain in JS | Full Stack (<a href="https://www.udemy.com/certificate/UC-0b988b8d-e5c8-4b91-91ab-7fbb561cb1ea/">Certificate</a>)<br>    Udemy Java Masterclass (In Progress, <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/">course</a>)<br>    Udemy Android Development in Kotlin Masterclass (In Progress, <a href="https://www.udemy.com/course/android-oreo-kotlin-app-masterclass">course</a>)<br>    TeamTreeHouse Full-Stack JavaScript 44 Hours (<a href="https://teamtreehouse.com/tracks/full-stack-javascript">Track/Course</a>)<br>    TeamTreeHouse 11,000 Points in JavaScript',
+    'top': 'JavaScript         [<span class="vsh-text vsh-green"> | | | | | | | | | | | | </span><span class="vsh-text vsh-yellow">| | | | | </span><span class="vsh-text vsh-magenta">| | |</span> ]<br>Node.JS             [<span class="vsh-text vsh-green"> | | | | | | | | | | | | </span><span class="vsh-text vsh-yellow">| | | | | </span><span class="vsh-text vsh-magenta">| |</span>   ]<br>Python               [<span class="vsh-text vsh-green"> | | | | | | | | | | | | </span><span class="vsh-text vsh-yellow">| | | | | </span><span class="vsh-text vsh-magenta">| </span>    ]<br>Java                   [<span class="vsh-text vsh-green"> | | | | | | | | | | | | </span><span class="vsh-text vsh-yellow">| | | |</span>         ]<br>C++                    [<span class="vsh-text vsh-green"> | | | | | | | | | | | | </span><span class="vsh-text vsh-yellow">| </span>              ]<br>C                        [<span class="vsh-text vsh-green"> | | | | | | | | | | | | </span>                ]'
 
 }
 
@@ -61,7 +64,7 @@ const keypress = (key, action) => {
 const newTextarea = () => {
     var h = document.getElementsByClassName('vsh-textarea')[0];
     var j = document.createElement('span');
-    h.innerHTML += '<br /><span class="vsh-text vsh-yellow">guest</span> at <span class="vsh-text vsh-magenta">glaukiol1</span><br>';
+    h.innerHTML += '<br /><span class="vsh-text vsh-yellow">💻 guest</span>@<span class="vsh-text vsh-magenta">glaukiol1</span><br>';
     j.innerHTML = '❯ █'
     return h.appendChild(j);
 }
@@ -83,7 +86,13 @@ const getCommandOutput = (command) => {
         return commands.help;
     } else if (command === 'whoami') {
         return commands.whoami;
-    } else{
+    } else if (command === "touch") {
+        return commands.touch;
+    } else if (command === "learning") {
+        return commands.learning;
+    } else if (command === "top") {
+        return commands.top;
+    } else {
         return `Unknown command: <span class="vsh-text vsh-magenta">${command}</span>`;
     }
 }
