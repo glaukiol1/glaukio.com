@@ -1,0 +1,19 @@
+* {
+    font-family: "Open Sans", Helvetica, Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: #e9ffe8 !important;
+}
+
+#heading {
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.5em;
+    padding: .3em;
+    color: #006b47;
+}
