@@ -77,9 +77,9 @@ header {
 
 @media only screen and (max-width: 800px) {
     #heading {
-        font-size: 4em !important;
+        font-size: 3em !important;
     }
     #bio {
-        font-size: 1.5em !important;
+        font-size: 1em !important;
     }
 }
