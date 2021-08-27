@@ -1,12 +1,13 @@
 footer {
     position: fixed;
     bottom: 5%;
-    right: 44%;
-    left: 44%;
+    right: 42%;
+    left: 42%;
     background-color: white;
     padding: 1em;
     border-radius: 14px;
     box-shadow: 2px 3px 5px lightgray;
+    text-align: center;
 }
 
 .navbar-icon {
@@ -38,5 +39,19 @@ footer {
     }
     100% {
         background-color: rgba(5,5,5,0.08);
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    footer {
+        left: 40% !important;
+        right: 40% !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    footer {
+        left: 31% !important;
+        right: 31% !important;
     }
 }
